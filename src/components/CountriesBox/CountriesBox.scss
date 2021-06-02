@@ -1,0 +1,28 @@
+.slider{
+    padding: 2rem;
+    width: 60%;
+    
+    &__cards{
+        display: flex;
+        overflow-x: hidden;
+        padding: 1rem;
+        align-items: center;
+        scroll-behavior: smooth;
+        
+    }
+
+    &__buttons{
+        font-size: 2.5rem;
+        margin-top: 5rem;
+        & > *{
+            width: 4rem;
+            height: 4rem;
+            text-align: center;
+            background-color: #527d5c;
+            border-radius: 50%;
+            color: #fff;
+            margin-right: 1rem;
+        }
+    }
+}
+
