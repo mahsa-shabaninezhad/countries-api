@@ -1,9 +1,10 @@
 .slider{
     padding: 2rem;
-    width: 60%;
+    width: 55vw;
     
     &__cards{
         display: flex;
+        width: 100%;
         overflow-x: hidden;
         padding: 1rem;
         align-items: center;
@@ -18,10 +19,10 @@
             width: 4rem;
             height: 4rem;
             text-align: center;
-            background-color: #527d5c;
             border-radius: 50%;
             color: #fff;
             margin-right: 1rem;
+            opacity: .8;
         }
     }
 }

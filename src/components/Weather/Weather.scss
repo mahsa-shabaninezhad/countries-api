@@ -1,0 +1,104 @@
+.weather-card{
+    margin: 0 auto;
+    font-size: 2rem;
+    width: 50%;
+    padding: 5rem;
+    background-color: rgba(255, 255, 255, 0.589);
+    
+    @media screen and (min-width: 1484px) {
+        font-size: 2.5rem;
+    }
+    
+    @media screen and (max-width: 680px) {
+        padding: 5rem 2rem;
+    }
+    @media screen and (max-width: 580px) {
+        font-size: 1.6rem;
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 1.3rem;
+    }
+    @media screen and (max-width: 380px) {
+        font-size: 1rem;
+        // padding: 2rem;
+    }
+    
+
+    &__content{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        h1{
+            margin-bottom: 2rem;
+        }
+
+        & > p, & > h1{
+            width: 100%;
+        }
+        
+        @media screen and (max-width:1050px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            min-height: 40vh;
+            h1{
+                margin-bottom: 0;
+            }
+            & > p, & > h1{
+                width: max-content;
+            }
+        }
+
+        &__main-des{
+            position: relative;
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            border: 2px solid transparent;
+            padding: 1rem;
+
+            &>*{
+                width: 50%;
+            }
+            img{
+                max-width: 150px;
+            }
+            .weather-des{
+                width: 100%;
+                // text-align: center;
+            }
+            
+            @media screen and (max-width:1050px) {
+                width: 100%;
+                border-right: 2px solid transparent !important;
+                
+                
+                .weather-des{
+                    text-align: center;
+                }
+            }
+        }
+        &__detailed-des{
+            padding-left: 10%;
+            
+            @media screen and (max-width:1050px) {
+                padding-top: 3rem;
+            }
+        }
+
+    }
+
+    .close{
+        position: absolute;
+        top: 5rem;
+        left: 5rem;
+        width: 4rem;
+        height: 4rem;
+        text-align: center;
+        border-radius: 50%;
+    }
+
+}

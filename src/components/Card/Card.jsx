@@ -1,10 +1,12 @@
-import React, { useRef, useState, useCallback } from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import './Card.scss'
+import { ThemeContext } from '../../contexts/ThemeProvider'
 
-const Card = ({id, country}) => {
-    console.log('i am rerenderig!!!');
+const Card = ({country, weather}) => {
     const {flag, name, capital, region, nativeName, population, callingCodes, demonym, area} = country
+
+    const {theme} = useContext(ThemeContext)
 
     return (
         <div className='card'>
@@ -20,6 +22,13 @@ const Card = ({id, country}) => {
                 <p>Population: {population.toLocaleString()}</p>
                 {area? <p>Area: {area.toLocaleString()} Km<sup>2</sup></p>: <p>Area: -</p>}
                 <p>Calling Code: {callingCodes}</p>
+                <button 
+                    className='btn card__btn' 
+                    onClick={() => weather(capital)}
+                    style={{color: theme.color}}
+                >
+                    Weather Forcast &rarr;
+                </button>
             </div>
         </div>
     )

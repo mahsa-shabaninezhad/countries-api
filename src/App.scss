@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.btn{
+    border: none;
+    background-color: transparent;
+    font-size: inherit;
+    transition: transform .25s;
+    color: #fff;
+    cursor: pointer;
+    &:focus{
+        outline: none;
+    }
+    &:active{
+        transform: scale(.9);
+    }
+}
+
+.App{
+    font-size: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    
+    // background-image: linear-gradient(#00000023,#00000023) ,url(./assets/images/asia.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

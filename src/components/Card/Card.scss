@@ -10,6 +10,11 @@
     overflow: hidden;
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.699);
+    // transition: transform 2s;
+    perspective: 1000;
+    transform-style: preserve-3d;
+    animation: flip .5s;
+    backface-visibility: hidden;
 
     &__img{
         width: 100%;
@@ -36,4 +41,18 @@
         margin-bottom: 1.5rem;
     }
 
+    &__btn{
+        color: green;
+        margin: 0 auto;
+    }
+
+}
+
+@keyframes flip {
+    0%{
+        transform: rotateY(0);
+    }
+    0%{
+        transform: rotateY(-180deg);
+    }
 }
